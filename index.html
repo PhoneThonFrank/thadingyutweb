@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .loading-container {
+      text-align: center;
+    }
+
+    .loading-text {
+      font-size: 3rem;
+      color: #007BFF;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <h1 class="loading-text">Loading</h1>
+  </div>
+
+  <script>
+    // Show the loading message for 3 seconds, then redirect to home.html
+    setTimeout(() => {
+      window.location.href = 'home.html';
+    }, 3000);
+  </script>
+</body>
+</html>
